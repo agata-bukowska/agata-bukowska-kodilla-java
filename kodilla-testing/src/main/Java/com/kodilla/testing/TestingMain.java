@@ -5,32 +5,34 @@ import com.kodilla.testing.com.kodilla.testing.user.SimpleUser;
 
 public class TestingMain {
     public static void main(String[] args) {
+
         SimpleUser simpleUser = new SimpleUser("theForumUser");
+
         String result = simpleUser.getUsername();
+
         if (result.equals("theForumUser")) {
             System.out.println("test OK");
         } else {
             System.out.println("Error!");
         }
-        System.out.println("Test jednostkowy:");
 
-        //CALCULATOR
         Calculator calculate = new Calculator();
 
-        int sum = calculate.add(2,4);
+        int sum = calculate.add(2, 5);
+        int difference = calculate.subtract(5, 2);
 
-        if (sum == 6) {
-            System.out.println("TEST ADD OK");
+        if (sum == 7) {
+            System.out.println("Sum correct");
         } else {
-            System.out.println("TEST ADD FAILED");
+            System.out.println("Sum incorrect");
         }
 
-        int difference = calculate.subtract(5,3);
-
-        if (difference == 2) {
-            System.out.println("TEST SUBTRACT OK");
+        if (difference == 3) {
+            System.out.println("Difference correct");
         } else {
-            System.out.println("TEST SUBTRACT FAILED");
+            System.out.println("Difference incorrect");
         }
     }
 }
+
+
